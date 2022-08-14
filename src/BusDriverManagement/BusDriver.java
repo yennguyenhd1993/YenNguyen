@@ -56,8 +56,8 @@ public class BusDriver {//Thông tin lái xe
         this.tel = tel;
     }
 
-    public int getLevel() {
-        return level.ordinal();
+    public DriverLevel getLevel() {
+        return level;
     }
 
     public void setLevel(DriverLevel level) {
