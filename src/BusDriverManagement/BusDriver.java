@@ -1,5 +1,9 @@
 package BusDriverManagement;
 
+import Constant.DriverLevel;
+
+import java.util.Scanner;
+
 public class BusDriver {//Thông tin lái xe
     private static int AUTO_DRIVERID=10000;
 
@@ -7,17 +11,9 @@ public class BusDriver {//Thông tin lái xe
     private String name;
     private String address;
     private String tel;
-    private String level;
+    private DriverLevel level;
 
     public BusDriver() {
-    }
-
-    public BusDriver(int driverId, String name, String address, String tel, String level) {
-        this.driverId = driverId;
-        this.name = name;
-        this.address = address;
-        this.tel = tel;
-        this.level = level;
     }
 
     public static int getAutoDriverid() {
@@ -60,12 +56,30 @@ public class BusDriver {//Thông tin lái xe
         this.tel = tel;
     }
 
-    public String getLevel() {
-        return level;
+    public int getLevel() {
+        return level.ordinal();
     }
 
-    public void setLevel(String level) {
+    public void setLevel(DriverLevel level) {
         this.level = level;
+    }
+
+    public void input (){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Nhap ma lai xe : ");
+        driverId = Integer.parseInt(input.nextLine());
+
+        System.out.println("Nhap ho ten : ");
+        name = input.nextLine();
+
+        System.out.println("Nhap dia chi : ");
+        address = input.nextLine();
+
+        System.out.println("Nhap so dien thoai : ");
+        tel = input.nextLine();
+
+        System.out.println("Chon trinh do : ");
+        level = DriverLevel.valueOf(input.nextLine());
     }
 
     @Override
@@ -75,7 +89,11 @@ public class BusDriver {//Thông tin lái xe
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", tel='" + tel + '\'' +
-                ", level='" + level + '\'' +
+                ", level=" + level +
                 '}';
+    }
+
+    public void showInfo(){
+        System.out.println(toString());
     }
 }
