@@ -1,6 +1,14 @@
 package BusDriverManagement;
 
-public class AssignmentTable {//Bảng phân công
+import Constant.DriverLevel;
+
+import java.util.Scanner;
+
+public class AssignmentTable{//Bảng phân công
+
+    private BusRoutes busRoutes;
+
+    private BusDriver busDriver;
 
 
 }

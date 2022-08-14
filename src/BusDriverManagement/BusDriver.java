@@ -16,6 +16,19 @@ public class BusDriver {//Thông tin lái xe
     public BusDriver() {
     }
 
+    public BusDriver(int driverId, String name) {
+        this.driverId = driverId;
+        this.name = name;
+    }
+
+    public BusDriver(int driverId, String name, String address, String tel, DriverLevel level) {
+        this.driverId = driverId;
+        this.name = name;
+        this.address = address;
+        this.tel = tel;
+        this.level = level;
+    }
+
     public static int getAutoDriverid() {
         return AUTO_DRIVERID;
     }
