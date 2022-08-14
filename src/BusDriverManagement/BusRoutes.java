@@ -1,29 +1,35 @@
 package BusDriverManagement;
 
 public class BusRoutes {// Tuyến xe
-    private static int AUTO_IDROUTES=100;
+    private static int AUTO_ROUTESID=100;
 
-    private int idRoutes;// Mã tuyến
+    private int routesId;// Mã tuyến
     private float distance;// khoảng cách
     private int numberOfStops;
 
     public BusRoutes() {
     }
 
-    public static int getAutoIdroutes() {
-        return AUTO_IDROUTES;
+    public BusRoutes(int routesId, float distance, int numberOfStops) {
+        this.routesId = routesId;
+        this.distance = distance;
+        this.numberOfStops = numberOfStops;
     }
 
-    public static void setAutoIdroutes(int autoIdroutes) {
-        AUTO_IDROUTES = autoIdroutes;
+    public static int getAutoRoutesid() {
+        return AUTO_ROUTESID;
     }
 
-    public int getIdRoutes() {
-        return idRoutes;
+    public static void setAutoRoutesid(int autoRoutesid) {
+        AUTO_ROUTESID = autoRoutesid;
     }
 
-    public void setIdRoutes(int idRoutes) {
-        this.idRoutes = idRoutes;
+    public int getRoutesId() {
+        return routesId;
+    }
+
+    public void setRoutesId(int routesId) {
+        this.routesId = routesId;
     }
 
     public float getDistance() {
@@ -45,7 +51,7 @@ public class BusRoutes {// Tuyến xe
     @Override
     public String toString() {
         return "BusRoutes{" +
-                "idRoutes=" + idRoutes +
+                "routesId=" + routesId +
                 ", distance=" + distance +
                 ", numberOfStops=" + numberOfStops +
                 '}';

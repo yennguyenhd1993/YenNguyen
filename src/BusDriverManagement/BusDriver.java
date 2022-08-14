@@ -1,9 +1,9 @@
 package BusDriverManagement;
 
 public class BusDriver {//Thông tin lái xe
-    private static int AUTO_IDDRIVER=10000;
+    private static int AUTO_DRIVERID=10000;
 
-    private int idDriver;
+    private int driverId;
     private String name;
     private String address;
     private String tel;
@@ -12,28 +12,28 @@ public class BusDriver {//Thông tin lái xe
     public BusDriver() {
     }
 
-    public BusDriver(int idDriver, String name, String address, String tel, String level) {
-        this.idDriver = idDriver;
+    public BusDriver(int driverId, String name, String address, String tel, String level) {
+        this.driverId = driverId;
         this.name = name;
         this.address = address;
         this.tel = tel;
         this.level = level;
     }
 
-    public static int getAutoIddriver() {
-        return AUTO_IDDRIVER;
+    public static int getAutoDriverid() {
+        return AUTO_DRIVERID;
     }
 
-    public static void setAutoIddriver(int autoIddriver) {
-        AUTO_IDDRIVER = autoIddriver;
+    public static void setAutoDriverid(int autoDriverid) {
+        AUTO_DRIVERID = autoDriverid;
     }
 
-    public int getIdDriver() {
-        return idDriver;
+    public int getDriverId() {
+        return driverId;
     }
 
-    public void setIdDriver(int idDriver) {
-        this.idDriver = idDriver;
+    public void setDriverId(int driverId) {
+        this.driverId = driverId;
     }
 
     public String getName() {
@@ -71,7 +71,7 @@ public class BusDriver {//Thông tin lái xe
     @Override
     public String toString() {
         return "BusDriver{" +
-                "idDriver=" + idDriver +
+                "driverId=" + driverId +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", tel='" + tel + '\'' +
