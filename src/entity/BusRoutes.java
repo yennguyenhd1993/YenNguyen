@@ -1,8 +1,8 @@
-package BusDriverManagement;
+package entity;
 
 import java.util.Scanner;
 
-public class BusRoutes {// Tuyến xe
+public class BusRoutes implements QLRoutes {// Tuyến xe
     private static int AUTO_ROUTESID=100;
 
     private int routesId;// Mã tuyến
@@ -50,18 +50,6 @@ public class BusRoutes {// Tuyến xe
         this.busStopNumber = busStopNumber;
     }
 
-    public void input (){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Nhap ma tuyen : ");
-        routesId = Integer.parseInt(input.nextLine());
-
-        System.out.println("Nhap Khoang cach : ");
-        distance = input.nextFloat();
-
-        System.out.println("Nhap so diem dung : ");
-        busStopNumber = Integer.parseInt(input.nextLine());
-    }
-
     @Override
     public String toString() {
         return "BusRoutes{" +
@@ -70,7 +58,17 @@ public class BusRoutes {// Tuyến xe
                 ", busStopNumber=" + busStopNumber +
                 '}';
     }
-    public void showInfo(){
-        System.out.println(toString());
-    }
+
+  @Override
+        public void inputInfo() {
+
+            this.routesId =BusRoutes.AUTO_ROUTESID++;
+            System.out.print("Nhập mã tuyến xe: ");
+            this.routesId = new Scanner(System.in).nextInt();
+            System.out.print("Nhập khoảng cách: ");
+            this.distance = Float.parseFloat(new Scanner(System.in).nextLine());
+            System.out.print("Nhập số điểm số điểm dừng: ");
+            this.busStopNumber= new Scanner(System.in).nextInt();
+            return;
+        }
 }
